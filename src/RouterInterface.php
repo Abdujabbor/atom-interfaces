@@ -7,7 +7,7 @@
 
 namespace Atom\Interfaces;
 
-use Psr\Http\Message\RequestInterface;
+use Psr\Http\Message\ServerRequestInterface;
 
 /**
  * Interface RouterInterface
@@ -17,9 +17,9 @@ use Psr\Http\Message\RequestInterface;
 interface RouterInterface
 {
     /**
-     * @param RequestInterface $request
+     * @param ServerRequestInterface $request
      *
      * @return RouteInterface
      */
-    public function dispatch(RequestInterface $request);
+    public function dispatch(ServerRequestInterface $request);
 }
