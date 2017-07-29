@@ -9,7 +9,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Atom\\Interfaces": "src"
+      "Atom\\Interfaces": "src/"
     }
   }
 }
