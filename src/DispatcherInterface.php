@@ -7,8 +7,8 @@
 
 namespace Atom\Interfaces;
 
-use Interop\Http\ServerMiddleware\DelegateInterface;
-use Interop\Http\ServerMiddleware\MiddlewareInterface;
+use Psr\Http\Server\MiddlewareInterface;
+use Psr\Http\Server\RequestHandlerInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
@@ -35,16 +35,14 @@ interface DispatcherInterface extends MiddlewareInterface
 
     /**
      * @param ServerRequestInterface $request
-     * @param DelegateInterface $delegate
-     *
+     * @param RequestHandlerInterface $handler
      * @return ResponseInterface
      */
-    public function process(ServerRequestInterface $request, DelegateInterface $delegate);
+    public function process(ServerRequestInterface $request, RequestHandlerInterface  $handler): ResponseInterface;
 
     /**
      * @param ServerRequestInterface $request
-     *
      * @return ResponseInterface
      */
-    public function dispatch(ServerRequestInterface $request);
+    public function handle(ServerRequestInterface $request): ResponseInterface;
 }

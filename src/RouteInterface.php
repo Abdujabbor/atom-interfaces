@@ -7,7 +7,7 @@
 
 namespace Atom\Interfaces;
 
-use Interop\Http\ServerMiddleware\MiddlewareInterface;
+use Psr\Http\Server\MiddlewareInterface;
 
 /**
  * Interface RouteInterface
